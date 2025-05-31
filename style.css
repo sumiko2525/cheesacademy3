@@ -1,0 +1,408 @@
+/* ヘッダー内の横並び */
+.header-inner {
+    display: flex;
+    /* 中の要素（ロゴとナビ）を横並びに！ */
+    justify-content: space-between;
+    /* 左と右にきれいに分けて配置 */
+    align-items: center;
+    /* 縦の位置を中央に揃える */
+    padding: 20px;
+    /* 内側の余白をつけて余裕を持たせる */
+    max-width: 1200px;
+    /* 横幅の最大サイズを1200pxにする（仕様に合わせて） */
+    margin: 0 auto;
+    /* 中央に寄せる（左右の自動マージン） */
+  }
+  
+  /* ナビゲーションのリンクリスト */
+  .nav ul {
+    display: flex;
+    /* リスト（liタグたち）を横並びに */
+    list-style: none;
+    /* リストの点（●）を消す */
+    margin: 0;
+    /* デフォルトの余白をリセット */
+    padding: 0;
+  }
+  
+  /* 各リンクのスタイル */
+  .nav li {
+    margin-left: 20px;
+    /* リンク同士の間に余白をつけて見やすく */
+  }
+  
+  /* リンクの文字スタイル */
+  .nav a {
+    text-decoration: none;
+    /* 下線を消す */
+    font-size: 21px;
+    /* 仕様通りのサイズ */
+    color: #222222;
+    /* 文字色を黒っぽく */
+  }
+  
+  .nav a:hover {
+    /* マウスを乗せたときに黄色に！ */
+    color: #ffd61a; /* 黄色に変化 */
+  }
+  .mainvisual {
+    position: relative;
+    /* 子供（文字）を自由に重ねるために親をrelativeにする */
+    width: 100%;
+    height: 600px; /* 高さは適宜調整してOK */
+    overflow: hidden;
+  }
+  
+  .mainvisual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像を枠いっぱいに拡大して切り取る */
+  }
+  
+  .mainvisual-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 親の真ん中に文字を上下中央揃えする魔法 */
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .mainvisual-text h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .mainvisual-text p {
+    font-size: 32px;
+  }
+
+  .about {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .about h2 {
+    font-size: 24px;
+    color: #ffd61a; /* 黄色にして目立たせる */
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .about-images {
+    display: flex;
+    gap: 0px; /* ←間を狭める */
+    margin-top: 40px;
+    justify-content: center;
+  }
+  
+  .about-images img {
+    width: 25%; /* ←幅を「%」にして4枚きれいに並べる */
+    height: auto;
+    object-fit: cover;
+  }
+
+  .about-images {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .about-images img {
+    width: 100%;
+    height: auto;
+  }
+
+  .course {
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .course h2 {
+    font-size: 24px;
+    color: #ffd61a;
+    margin-bottom: 40px;
+  }
+  
+  .course-lead {
+    font-size: 16px;
+    margin-bottom: 60px;
+  }
+  
+  .course-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .course-item.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .course-item.reverse .course-text {
+    margin-left: 0;
+    margin-right: 40px;
+  }
+
+  .course-item img {
+    width: 480px;
+    height: auto;
+  }
+  
+  .course-text {
+    margin-left: 40px;
+    text-align: left;
+    max-width: 480px;
+  }
+  
+  .course-text h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #222222;
+  }
+  
+  .course-text p {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.8;
+  }
+
+  .news {
+    text-align: center;
+    padding: 80px 20px;
+  }
+  /* セクション全体を中央寄せ。上下に80px、左右に20pxの余白をつけている。 */
+  
+  .news h2 {
+    font-size: 24px;
+    color: #ffd61a;
+    margin-bottom: 10px;
+  }
+  /*  「NEWS」のタイトルを、24pxの大きめフォント、黄色（#ffd61a）にして、下に少し余白をつけている。*/
+  
+  .news-sub {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 40px;
+  }
+/* サブタイトル（「ニュース」）を小さめの14px、グレー色（#999）で表示し、下に40pxの余白をあける。 */
+  
+  .news-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+/* NEWSカード（news-item）を横並びにする設定。
+display: flex：子供たちを横並びにする
+justify-content: center：中央揃え
+gap: 30px：カード同士の間に30px空ける
+flex-wrap: wrap：画面が狭くなったら、下に折り返す */
+  
+  .news-item {
+    width: 300px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    text-align: left;
+  }
+  /*  1枚1枚のニュースカードのデザイン。
+幅300px固定
+背景は白（#fff）
+枠線は薄いグレー（#eee）
+角を丸く（border-radius: 8px）
+paddingで内側に余白20px
+初期状態では影なし
+hover時に動かすためのtransition設定（0.3秒） */
+  
+  .news-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  /* マウスを乗せたときの効果！
+ふんわり影（box-shadow）
+少し上に浮かせる（translateY(-5px)） */
+
+  .news-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  /* ニュースカード内の画像スタイル。
+カード幅いっぱい（width: 100%）
+高さは自動調整（縦横比維持）
+下に10pxの余白
+少し角を丸める（border-radius: 5px）
+
+ */
+  .news-item .date {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .news-item .text {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+  }
+  /* 少し大きめの15px
+濃いめの文字色（#333）
+行間を広めに（line-height: 1.6）して読みやすく */
+  
+  .news-more {
+    margin-top: 40px;
+  }
+  
+  .news-more a {
+    display: inline-block;
+    padding: 12px 40px;
+    background: #ffd61a;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  /* 「More」ボタンの基本スタイル。
+ふっくら丸み（border-radius: 30px）
+太字
+黄色背景、白文字
+hover時にスムーズに色変わる（transition） */
+  
+  .news-more a:hover {
+    background: #e5bc00;
+  }
+
+  .access {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f9f9f9;
+  }
+  
+  .access h2 {
+    font-size: 24px;
+    color: #ffd61a;
+    margin-bottom: 10px;
+  }
+  
+  .access-sub {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 40px;
+  }
+  
+  .access-map {
+    max-width: 1000px;
+    margin: 0 auto 40px;
+  }
+  
+  .access-info {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+  }
+
+  /* 
+.access	セクションの外枠。中央揃え＋余白あり＋背景色少し薄く。
+.access-map	iframe地図を中央に置く。1000px以内に制限。
+.access-info	住所や電話番号などの文字スタイルを整える。
+.access-sub	「会社情報・所在地」のサブタイトル。 */
+
+.contact {
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .contact h2 {
+    font-size: 24px;
+    color: #ffd61a;
+    margin-bottom: 10px;
+  }
+  
+  .contact-sub {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 40px;
+  }
+  
+  .contact-lead {
+    font-size: 16px;
+    margin-bottom: 60px;
+    line-height: 1.8;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .form-item {
+    margin-bottom: 20px;
+  }
+  
+  .form-item label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-item input,
+  .form-item textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    /*  「1ピクセルの太さで、実線の、明るいグレー色の枠線を引く」 */
+    border-radius: 5px;
+  }
+  
+  .form-submit {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .form-submit button {
+    background: #ffd61a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .form-submit button:hover {
+    background: #e5bc00;
+  }
+
+  /* .form-submit button	form-submitクラスの中にあるbutton（送信ボタン）をターゲットにしている
+:hover	マウスを乗せたときだけ（hover時だけスタイルを変える）
+background: #e5bc00;	背景色を**濃いめの黄色（#e5bc00）**に変更する */
+
+.footer {
+    background: #ffd61a;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    color: #fff;
+  }
